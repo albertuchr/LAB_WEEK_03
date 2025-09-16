@@ -1,5 +1,7 @@
 package com.example.lab_week_03
 
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 import android.widget.TextView
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -38,9 +40,18 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val coffeeId = arguments?.getInt(COFFEE_ID, 0) ?: 0
         setCoffeeData(coffeeId)
+
+        val backButton = view.findViewById<Button>(R.id.btn_back)
+        backButton.setOnClickListener {
+            findNavController().navigate(R.id.action_detailFragment_to_coffeeList)
+        }
+
     }
+
+
 
 
     fun setCoffeeData(id: Int){
@@ -56,6 +67,14 @@ class DetailFragment : Fragment() {
             R.id.latte -> {
                 coffeeTitle?.text = getString(R.string.latte_title)
                 coffeeDesc?.text = getString(R.string.latte_desc)
+            }
+            R.id.matcha -> {
+                coffeeTitle?.text = getString(R.string.matcha_title)
+                coffeeDesc?.text = getString(R.string.matcha_desc)
+            }
+            R.id.macchiato -> {
+                coffeeTitle?.text = getString(R.string.macchiato_title)
+                coffeeDesc?.text = getString(R.string.macchiato_desc)
             }
         }
     }

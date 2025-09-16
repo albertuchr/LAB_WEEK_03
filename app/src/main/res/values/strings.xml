@@ -13,4 +13,10 @@ extraction.)</string>
 espresso with steamed milk and only a little milk foam poured over it. Serve in a
 latte glass or a coffee cup. Flavored syrup can be added.</string>
     <string name="coffee_list">Coffee List</string>
+    <string name="matcha_title">MATCHA</string>
+    <string name="matcha_desc">Matcha is a Japanese green tea powder mixed with hot water or milk, creating a smooth and earthy flavor.</string>
+
+    <string name="macchiato_title">MACCHIATO</string>
+    <string name="macchiato_desc">Macchiato is an espresso coffee drink with a small amount of foamed milk on top.</string>
+
 </resources>
